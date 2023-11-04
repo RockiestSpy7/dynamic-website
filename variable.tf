@@ -79,3 +79,10 @@ variable "ssl_certificate_arn" {
   description   = "ssl certificate arn"
   type          = string
 }
+
+# sns topic variable
+variable "oprerator_email" {
+  default       = "cobyr159@gmail.com"
+  description   = "valid email address"
+  type          = string
+}
