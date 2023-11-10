@@ -86,3 +86,16 @@ variable "oprerator_email" {
   description   = "valid email address"
   type          = string
 }
+
+# auto scaling group variables
+variable "launch_template_name" {
+  default       = "dev-launch-template"
+  description   = "name of the launch template"
+  type          = string
+}
+
+variable "ec2_image_id" {
+  default       = ""
+  description   = "name of the launch template"
+  type          = string
+}
