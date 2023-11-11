@@ -95,7 +95,19 @@ variable "launch_template_name" {
 }
 
 variable "ec2_image_id" {
-  default       = ""
-  description   = "name of the launch template"
+  default       = "ami-0e9132554eb826714"
+  description   = "id of the ami"
+  type          = string
+}
+
+variable "ec2_instance_type" {
+  default       = "t2.micro"
+  description   = "the ec2 instance type"
+  type          = string
+}
+
+variable "ec2_keypair_name" {
+  default       = "KeyPair"
+  description   = "name of ec2 key pair"
   type          = string
 }
