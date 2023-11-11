@@ -75,7 +75,7 @@ variable "multi_az_deployment" {
 
 # application load balancer variables
 variable "ssl_certificate_arn" {
-  default       = "arn:aws:acm:us-east-1:204694930892:certificate/e2d79599-1835-405d-9137-1ce9a6366318"
+  default       = "arn:aws:acm:us-east-1:204694930892:certificate/360f2be3-404f-40f8-a524-86a5511b95f1"
   description   = "ssl certificate arn"
   type          = string
 }
@@ -109,5 +109,18 @@ variable "ec2_instance_type" {
 variable "ec2_keypair_name" {
   default       = "KeyPair"
   description   = "name of ec2 key pair"
+  type          = string
+}
+
+# route 53 variables
+variable "domain_name" {
+  default       = "awstestdns.com"
+  description   = "domain name"
+  type          = string
+}
+
+variable "record_name" {
+  default       = "www"
+  description   = "sub domain name"
   type          = string
 }
