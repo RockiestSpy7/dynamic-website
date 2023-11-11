@@ -49,11 +49,11 @@ variable "ssh_location" {
 }
 
 #rds variables
-#variable "database_snapshot_identifier" {
-  #default       = "snapshot"
-  #description   = "The database snapshot arn"\
-  #type          = string
-#}
+variable "database_snapshot_identifier" {
+  default       = "arn:aws:rds:us-east-1:204694930892:snapshot:fleetcart-final-snapshot"
+  description   = "The database snapshot arn"
+  type          = string
+}
 
 variable "database_instance_class" {
   default       = "db.t2.micro"
@@ -61,11 +61,11 @@ variable "database_instance_class" {
   type          = string
 }
 
-#variable "database_isntance_identifier" {
-  #default       = "dev-rds-db"
-  #description   = "The database instance identifier"
-  #type          = string
-#}
+variable "database_instance_identifier" {
+  default       = "dev-rds-db"
+  description   = "The database instance identifier"
+  type          = string
+}
 
 variable "multi_az_deployment" {
   default       = false
