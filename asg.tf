@@ -11,9 +11,7 @@ resource "aws_launch_template" "webserver_launch_template" {
     enabled = true
   }
 
-  network_interfaces {
-    associate_public_ip_address = true
-  }
+ 
 
   vpc_security_group_ids = [aws_security_group.webserver_security_group.id]
 }
