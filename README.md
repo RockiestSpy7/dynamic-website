@@ -1,4 +1,4 @@
-# Host-a-Dynamic-Ecommerce-Website
+# Host-a-Dynamic-Website
 
 <h3>In my AWS cloud project I deploy a dynamic LAMP stack website with terraform.</h3>
 
