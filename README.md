@@ -1,5 +1,5 @@
 # Host-a-Dynamic-Website
-
+<h2># This repo is for my own personal learning experience and will be used as a reference for future projects of mine. If you use anything within this repo you may have to adjust it to your own project #</h2>
 <h3>In my AWS cloud project I deploy a dynamic LAMP stack website with terraform.</h3>
 
 
