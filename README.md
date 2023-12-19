@@ -2,6 +2,8 @@
 <h2># This repo is for my own personal learning experience and will be used as a reference for future projects of mine. If you use anything within this repo you may have to adjust it to your own project #</h2>
 <h3>In my AWS cloud project I deploy a dynamic LAMP stack website with terraform.</h3>
 
+![1 Terraform-Ecommerce (1)](https://github.com/RockiestSpy7/dynamic-website/assets/125578099/11a5a9ec-4d1a-4dec-9b32-871c0ae3ee3d)
+
 
 * <b>Virtual Private Cloud (VPC):</b> Serving as the backbone, the VPC provides an isolated network within AWS. It's the fundamental layer where all other services reside, ensuring secure and controlled network traffic.
 
