@@ -21,6 +21,13 @@ The AWS infrastructure setup for this project includes:
 - **Route 53:** Manages the domain name and DNS settings, directing traffic to the ALB.
 - **GitHub:** Stores the web application files and deployment scripts.
 
+## Deployment Steps
+
+1. Create S3 Bucket ti store terraform state file
+2. Execute VPC terraform file
+3. Execute Nat-Gateway terraform file
+4. Execute 
+
 ## Deployment Script
 
 The script provided automates the deployment and configuration of the e-commerce platform on an EC2 instance. Here's an outline of the script's actions:
@@ -69,14 +76,6 @@ chown apache:apache -R /var/www/html
 sudo service httpd restart
 ```
 
-## Deployment Steps
-
-1. **Infrastructure Setup:** Use Terraform scripts to provision the AWS resources as outlined in the architecture.
-2. **Script Execution:** Run the above script on the EC2 instance to configure the environment, install necessary packages, and set up the e-commerce platform.
-3. **AMI Creation:** After configuring the EC2 instance, create an AMI for quick deployment and scalability.
-4. **Load Balancer and Auto Scaling:** Configure the ALB and Auto Scaling group to distribute traffic and manage instance scaling.
-5. **DNS Configuration:** Set up Route 53 to direct your domain's traffic to the ALB, providing users access to the site.
-6. **Monitoring:** Implement monitoring and alerts for the infrastructure to ensure uptime and performance.
 
 ## Conclusion
 
