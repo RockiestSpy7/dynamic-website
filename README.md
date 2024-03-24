@@ -17,8 +17,12 @@ The AWS infrastructure setup for this project includes:
 - **Bastion Host:** Secure instance for connecting to other AWS resources within private subnets.
 - **Application Load Balancer (ALB):** Distributes incoming application traffic across multiple targets in different availability zones.
 - **EC2 Instances:** Serve the dynamic web application. Managed within an Auto Scaling group, these instances can scale based on demand.
+- **Amazon Machine Image (AMI):** Custom EC2 image containing pre-configured settings and software for launching instances.
+- **RDS Instance:** Hosts the database, providing data persistence and easy management while leveraging AWS scalability and security features.
+- **S3 Bucket:** Store terraform files
 - **Auto Scaling Group:** Dynamically adjusts the number of EC2 instances to meet the application's demand while maintaining high availability.
 - **Route 53:** Manages the domain name and DNS settings, directing traffic to the ALB.
+- **AWS Certificate Manager:** Provides SSL/TLS certificates for securely handling HTTPS traffic.
 - **GitHub:** Stores the web application files and deployment scripts.
 
 ## Deployment Script
@@ -56,7 +60,7 @@ find /var/www -type d -exec sudo chmod 2775 {} \;
 find /var/www -type f -exec sudo chmod 0664 {} \;
 
 # Download and prepare the e-commerce platform files
-sudo aws s3 sync s3://aosnotes77-fleetcart-web-files /var/www/html
+sudo aws s3 sync s3://coby-fleetcart-web-files /var/www/html
 cd /var/www/html
 sudo unzip FleetCart.zip
 sudo mv FleetCart/* /var/www/html
