@@ -14,13 +14,13 @@ The AWS infrastructure setup for this project includes:
 - **Internet Gateway (IGW):** Facilitates internet access for resources within the VPC.
 - **Security Groups:** Define firewall rules to control inbound and outbound traffic to AWS resources.
 - **NAT Gateway:** Allows internet access for instances in private subnets without exposing them to inbound traffic.
-- **Bastion Host:** Secure instance for connecting to other AWS resources within private subnets.
 - **Application Load Balancer (ALB):** Distributes incoming application traffic across multiple targets in different availability zones.
-- **EC2 Instances:** Serve the dynamic web application. Managed within an Auto Scaling group, these instances can scale based on demand.
+- **Bastion Host:** Secure instance for connecting to other AWS resources within private subnets.
 - **Amazon Machine Image (AMI):** Custom EC2 image containing pre-configured settings and software for launching instances.
-- **RDS Instance:** Hosts the database, providing data persistence and easy management while leveraging AWS scalability and security features.
-- **S3 Bucket:** Store terraform files
+- **EC2 Instances:** Serve the dynamic web application. Managed within an Auto Scaling group, these instances can scale based on demand.
 - **Auto Scaling Group:** Dynamically adjusts the number of EC2 instances to meet the application's demand while maintaining high availability.
+- **RDS Instance:** Hosts the database, providing data persistence and easy management while leveraging AWS scalability and security features.
+- **S3 Buckets:** Made two buckets to store the website files and the other stores the terraform tfvars file.
 - **Route 53:** Manages the domain name and DNS settings, directing traffic to the ALB.
 - **AWS Certificate Manager:** Provides SSL/TLS certificates for securely handling HTTPS traffic.
 - **GitHub:** Stores the web application files and deployment scripts.
@@ -77,7 +77,3 @@ sudo service httpd restart
 ## Conclusion
 
 This project demonstrates a comprehensive approach to deploying a dynamic website on AWS, utilizing Terraform for infrastructure provisioning and a custom script for application deployment. The architecture ensures that the site is resilient, scalable, and secure, providing a solid foundation for future operations.
-
-
-<p>In my AWS cloud project I deploy a dynamic LAMP (Linux,Appache,MySQL,PHP) stack website with terraform.</p>
-
