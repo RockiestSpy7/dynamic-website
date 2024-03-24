@@ -60,7 +60,7 @@ find /var/www -type d -exec sudo chmod 2775 {} \;
 find /var/www -type f -exec sudo chmod 0664 {} \;
 
 # Download and prepare the e-commerce platform files
-sudo aws s3 sync s3://coby-fleetcart-web-files /var/www/html
+sudo aws s3 sync s3://coby-fleetcart-webfiles /var/www/html
 cd /var/www/html
 sudo unzip FleetCart.zip
 sudo mv FleetCart/* /var/www/html
